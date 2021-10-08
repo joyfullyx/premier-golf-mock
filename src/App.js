@@ -1,11 +1,11 @@
 import React from "react";
+import Nav from "../src/components/Navigation/Nav";
 import Home from "../src/pages/Home";
-
-// import "./App.css";
 
 export default function App() {
   return (
     <div>
+      <Nav />
       <Home />
     </div>
   );
