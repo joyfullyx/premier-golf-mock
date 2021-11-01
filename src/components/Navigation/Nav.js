@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -41,7 +43,7 @@ export default function BasicMenu() {
         >
           Courses
         </Button>
-        <Menu
+        {/* <Menu
           id="basic-menu"
           anchorEl={anchorEl}
           open={open}
@@ -63,6 +65,35 @@ export default function BasicMenu() {
           <MenuItem onClick={handleClose}>Lynnwood Golf Course</MenuItem>
           <MenuItem onClick={handleClose}>Cedarcrest Golf Course</MenuItem>
           <MenuItem onClick={handleClose}>Lake Padden Golf Course</MenuItem>
+        </Menu> */}
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <List>
+            {[
+              "Interbay Golf Center",
+              "Jackson Park Golf Course",
+              "Jefferson Park Golf Course",
+              "West Seattle Golf Course",
+              "Bellevue Golf Course",
+              "Crossroads Par 3 Golf Course",
+              "Legion Memorial Golf Course",
+              "Walter E. Hall Golf Course",
+              "Lynnwood Golf Course",
+              "Cedarcrest Golf Course",
+              "Lake Padden Golf Course",
+            ].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
         </Menu>
         <Button
           id="basic-button"
