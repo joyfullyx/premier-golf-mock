@@ -13,10 +13,12 @@ import Aerification from "../src/pages/Aerification";
 import Deals from "../src/pages/Deals";
 import FootGolf from "../src/pages/FootGolf";
 import Instruction from "../src/pages/Instruction";
+import Banner from "./components/Banner/Banner";
 
 export default function App() {
   return (
     <div>
+      <Banner />
       <Nav />
       <BookBtn />
       <Router>
