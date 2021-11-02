@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "../src/components/Navigation/Nav";
 import BookBtn from "./components/BookBtn/BookBtn";
 import Home from "../src/pages/Home";
@@ -13,12 +8,12 @@ import Aerification from "../src/pages/Aerification";
 import Deals from "../src/pages/Deals";
 import FootGolf from "../src/pages/FootGolf";
 import Instruction from "../src/pages/Instruction";
-import Banner from "./components/Banner/Banner";
+// import Banner from "./components/Banner/Banner";
 
 export default function App() {
   return (
     <div>
-      <Banner />
+      {/* <Banner /> */}
       <Nav />
       <BookBtn />
       <Router>
@@ -27,7 +22,7 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/about">
+            <Route path="/about">
               <About />
             </Route>
             <Route exact path="/aerification">
