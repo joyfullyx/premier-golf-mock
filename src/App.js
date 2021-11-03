@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "../src/components/Navigation/Nav";
-import BookBtn from "./components/BookBtn/BookBtn";
+// import BookBtn from "./components/BookBtn/BookBtn";
 import Home from "../src/pages/Home";
 import About from "../src/pages/About";
 import Aerification from "../src/pages/Aerification";
@@ -15,7 +15,7 @@ export default function App() {
     <div>
       {/* <Banner /> */}
       <Nav />
-      <BookBtn />
+      {/* <BookBtn /> */}
       <Router>
         <div>
           <Switch>

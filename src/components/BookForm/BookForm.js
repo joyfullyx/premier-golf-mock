@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography, Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
-import TimePicker from "@mui/lab/TimePicker";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function BookForm() {
+  // states for booking select form
   const [booking, setBooking] = useState({
     course: "",
     date: "",
@@ -25,6 +25,7 @@ export default function BookForm() {
     });
   }, []);
 
+  //   set booking state on select
   const handleSelect = (event) => {
     setBooking(event.target.value);
   };
@@ -35,14 +36,15 @@ export default function BookForm() {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        "& > :not(style)": {
-          m: 1,
-          width: 900,
-          height: 500,
-        },
+
+        // "& > :not(style)": {
+        //   m: 1,
+        //   width: 900,
+        //   height: 500,
+        // },
       }}
     >
-      <Paper elevation={3}>
+      <Paper elevation={3} style={styles.formStyle}>
         <Typography align="center" style={styles.headerStyle}>
           BOOK A TEE TIME
         </Typography>
@@ -123,6 +125,7 @@ export default function BookForm() {
             <MenuItem value="18">18</MenuItem>
           </Select>
         </FormControl>
+        <Button variant="contained">SEARCH</Button>
       </Paper>
     </Box>
   );
@@ -132,5 +135,9 @@ const styles = {
   headerStyle: {
     fontSize: 25,
     marginTop: 10,
+  },
+  formStyle: {
+    width: 894,
+    height: 273,
   },
 };
