@@ -11,8 +11,8 @@ export default function BookBtn() {
   );
 }
 
-const styles = {
-  buttonStyle: {
-    alignItems: "flex-end",
-  },
-};
+// const styles = {
+//   buttonStyle: {
+//     alignItems: "flex-end",
+//   },
+// };
