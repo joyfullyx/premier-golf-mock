@@ -11,12 +11,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function BookForm() {
-  //   const [value, setValue] = useState(null);
-  //   const [course, setCourse] = useState("");
-  //   const [time, setTime] = useState("");
-  //   const [players, setPlayers] = useState("");
-  //   const [holes, setHoles] = useState("");
-
   const [booking, setBooking] = useState({
     course: "",
     date: "",
@@ -30,15 +24,6 @@ export default function BookForm() {
       ...booking,
     });
   }, []);
-
-  //   const handleSelect = (event) => {
-  //     const value = event.target.value;
-  //     const name = event.target.name;
-  //     setBooking({
-  //       ...booking,
-  //       [name]: value,
-  //     });
-  //   };
 
   const handleSelect = (event) => {
     setBooking(event.target.value);
@@ -138,16 +123,6 @@ export default function BookForm() {
             <MenuItem value="18">18</MenuItem>
           </Select>
         </FormControl>
-        {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <TimePicker
-            label="Time"
-            value={value}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            renderInput={(params) => <TextField {...params} />}
-          />
-        </LocalizationProvider> */}
       </Paper>
     </Box>
   );
