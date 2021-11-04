@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Paper, Typography, Button, Container, Grid } from "@mui/material";
+import { Box, Paper, Typography, Button, Grid } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
@@ -98,6 +98,9 @@ export default function BookForm() {
               >
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
+                    disablePast
+                    error={false}
+                    helperText={null}
                     style={styles.dateStyle}
                     label="Date"
                     value={booking}

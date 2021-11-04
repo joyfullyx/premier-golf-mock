@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Menu, Box, List, ListItem, ListItemText } from "@mui/material";
-// import Logo from "../assets/Logo.png";
+// import Logo from "../assets/Logo.jpg";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
