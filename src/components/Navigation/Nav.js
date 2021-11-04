@@ -1,12 +1,15 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Button, Menu, Box, List, ListItem, ListItemText } from "@mui/material";
+// import Logo from "../assets/Logo.png";
 
 export default function BasicMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [about, setAbout] = useState(null);
   const open = Boolean(anchorEl);
+  const openAbout = Boolean(about);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    setAbout(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -21,6 +24,7 @@ export default function BasicMenu() {
           p: 1,
         }}
       >
+        {/* <Logo /> */}
         <Button
           id="basic-button"
           aria-controls="basic-menu"
@@ -65,27 +69,10 @@ export default function BasicMenu() {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           // onClick={handleClick}
+          onMouseOver={handleClick}
         >
           ABOUT
         </Button>
-        {/* <Button
-          id="basic-button"
-          aria-controls="basic-menu"
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          // onClick={handleClick}
-        >
-          PGC Instruction Academy
-        </Button> */}
-        {/* <Button
-          id="basic-button"
-          aria-controls="basic-menu"
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          // onClick={handleClick}
-        >
-          Footgolf
-        </Button> */}
         <Button
           id="basic-button"
           aria-controls="basic-menu"
@@ -95,15 +82,6 @@ export default function BasicMenu() {
         >
           DEALS
         </Button>
-        {/* <Button
-          id="basic-button"
-          aria-controls="basic-menu"
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          // onClick={handleClick}
-        >
-          Fall Aerification
-        </Button> */}
         <Button
           id="basic-button"
           aria-controls="basic-menu"
