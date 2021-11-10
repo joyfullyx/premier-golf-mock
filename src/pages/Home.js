@@ -15,7 +15,9 @@ export default function Home() {
       >
         <BookForm />
       </Grid>
-      <Deals />
+      <Grid container justifyContent="space-around" alignItems="center">
+        <Deals />
+      </Grid>
     </div>
   );
 }
@@ -23,7 +25,7 @@ export default function Home() {
 const styles = {
   boxImage: {
     backgroundImage: `url(${WestSeattle})`,
-    width: "100%",
+    // width: "100%",
     height: 700,
   },
 };
