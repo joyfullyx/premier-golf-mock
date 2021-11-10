@@ -1,9 +1,16 @@
-import axios from "axios";
+// import axios from "axios";
+const axios = require("axios");
 
-const api = {
-  search: function () {
-    return axios.get("https://golfworldapi.com/api/bv1/Country");
+// for local
+const urlPrefix = "http://localhost:3001";
+
+const API = {
+  getAllDeals: function (deals) {
+    return axios.get(`${urlPrefix}/api/deals`);
+  },
+  getDealsById: function (dealsId) {
+    return axios.get(`${urlPrefix}/api/deals/${dealsId}`);
   },
 };
 
-export default api;
+export default API;

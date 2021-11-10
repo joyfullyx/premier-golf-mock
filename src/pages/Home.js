@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import BookForm from "../components/BookForm/BookForm";
 import WestSeattle from "../assets/WestSeattle.png";
+import Deals from "./Deals";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       >
         <BookForm />
       </Grid>
+      <Deals />
     </div>
   );
 }
