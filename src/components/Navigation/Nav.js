@@ -15,6 +15,12 @@ export default function BasicMenu() {
     setAnchorEl(null);
   };
 
+  const styles = {
+    logoStyle: {
+      marginLeft: 17,
+    },
+  };
+
   return (
     <div>
       <Box
@@ -24,7 +30,11 @@ export default function BasicMenu() {
           p: 1,
         }}
       >
-        <img src={PremierGolfLogo} alt="premier golf logo" />
+        <img
+          src={PremierGolfLogo}
+          alt="premier golf logo"
+          style={styles.logoStyle}
+        />
         <Box
           sx={{
             display: "flex",
