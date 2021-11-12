@@ -61,8 +61,9 @@ export default function DealsDetail() {
       padding: 10,
     },
     footerStyles: {
-      background: "linear-gradient(to right bottom, #0044F4, #00EF60)",
+      background: "linear-gradient(to right, #0044F4, #00EF60)",
       color: "#0044F4",
+      height: 14,
     },
   };
 
@@ -70,9 +71,7 @@ export default function DealsDetail() {
     <div>
       <Grid container>
         <ImageList cols={4} gap={50}>
-          {/* <Box>
-          <Typography>Daily Deals</Typography>
-        </Box> */}
+          {/* map over deals res to render data to cards */}
           {deals.premierDeals.map((deals) => (
             <Card
               sx={{

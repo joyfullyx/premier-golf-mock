@@ -19,6 +19,9 @@ export default function BasicMenu() {
     logoStyle: {
       marginLeft: 17,
     },
+    buttonStyle: {
+      color: "black",
+    },
   };
 
   return (
@@ -43,6 +46,7 @@ export default function BasicMenu() {
           }}
         >
           <Button
+            style={styles.buttonStyle}
             id="basic-button"
             aria-controls="basic-menu"
             aria-haspopup="true"
@@ -81,6 +85,7 @@ export default function BasicMenu() {
             </List>
           </Menu>
           <Button
+            style={styles.buttonStyle}
             id="basic-button"
             aria-controls="basic-menu"
             aria-haspopup="true"
@@ -91,6 +96,7 @@ export default function BasicMenu() {
             ABOUT
           </Button>
           <Button
+            style={styles.buttonStyle}
             id="basic-button"
             aria-controls="basic-menu"
             aria-haspopup="true"
@@ -100,6 +106,7 @@ export default function BasicMenu() {
             DEALS
           </Button>
           <Button
+            style={styles.buttonStyle}
             id="basic-button"
             aria-controls="basic-menu"
             aria-haspopup="true"
