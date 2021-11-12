@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {
   Grid,
+  Box,
+  Paper,
   Card,
   CardActions,
   CardContent,
@@ -36,34 +38,43 @@ export default function DealsDetail() {
 
   const styles = {
     mediaStyles: {
-      height: 0,
+      height: 160,
       paddingTop: "56.25%",
       marginTop: "30",
     },
     cardStyles: {
-      justfifyContent: "space-around",
-      alignItems: "center",
+      // justfifyContent: "space-around",
+      // alignItems: "center",
+      maxWidth: 300,
+      margin: "auto",
+    },
+    buttonStyle: {
+      justifyContent: "center",
     },
   };
 
   return (
     <div>
-      <Grid container display="flex" justify="center" spacing={7}>
-        {/* <> */}
+      <Grid container display="flex" justify="center">
+        {/* <Box>
+          <Typography>Daily Deals</Typography>
+        </Box> */}
         {deals.premierDeals.map((deals) => (
           <Card
             sx={{
-              maxWidth: 345,
-              justifyContent: "space-around",
+              maxWidth: 400,
+              // justifyContent: "space-between",
               alignSelf: "center",
             }}
+            style={styles.cardStyles}
           >
             <CardMedia
               component="img"
-              height="309"
+              // height="309"
               // image={require(`${deals.image}`)}
               style={styles.mediaStyles}
-              imageUrl={`${deals.image}`}
+              // imageUrl={`${deals.image}`}
+              src={`${deals.image}`}
               alt="course logo and name"
             />
             <CardContent>
@@ -71,14 +82,13 @@ export default function DealsDetail() {
                 {deals.numberOfDeals} DEALS TODAY
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button variant="contained" size="small">
+            <CardActions style={styles.buttonStyle}>
+              <Button variant="outlined" size="small">
                 VIEW DEALS
               </Button>
             </CardActions>
           </Card>
         ))}
-        {/* </> */}
       </Grid>
     </div>
   );
