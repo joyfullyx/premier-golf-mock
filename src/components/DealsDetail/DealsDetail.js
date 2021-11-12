@@ -60,6 +60,10 @@ export default function DealsDetail() {
       fontWeight: "bold",
       padding: 10,
     },
+    footerStyles: {
+      background: "linear-gradient(to right bottom, #0044F4, #00EF60)",
+      color: "#0044F4",
+    },
   };
 
   return (
@@ -102,6 +106,9 @@ export default function DealsDetail() {
                   VIEW DEALS
                 </Button>
               </CardActions>
+              <div style={styles.footerStyles}>
+                <Typography style={styles.footerStyles}>'</Typography>
+              </div>
             </Card>
           ))}
         </ImageList>
