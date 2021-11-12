@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Grid,
+  ImageList,
   Box,
   Paper,
   Card,
@@ -39,7 +40,7 @@ export default function DealsDetail() {
   const styles = {
     mediaStyles: {
       height: 160,
-      paddingTop: "56.25%",
+      // paddingTop: "56.25%",
       marginTop: "30",
     },
     cardStyles: {
@@ -50,45 +51,60 @@ export default function DealsDetail() {
     },
     buttonStyle: {
       justifyContent: "center",
+      padding: 20,
+    },
+    contentStyles: {
+      textAlign: "center",
+    },
+    headingStyles: {
+      fontWeight: "bold",
+      padding: 10,
     },
   };
 
   return (
     <div>
-      <Grid container display="flex" justify="center">
-        {/* <Box>
+      <Grid container>
+        <ImageList cols={4} gap={50}>
+          {/* <Box>
           <Typography>Daily Deals</Typography>
         </Box> */}
-        {deals.premierDeals.map((deals) => (
-          <Card
-            sx={{
-              maxWidth: 400,
-              // justifyContent: "space-between",
-              alignSelf: "center",
-            }}
-            style={styles.cardStyles}
-          >
-            <CardMedia
-              component="img"
-              // height="309"
-              // image={require(`${deals.image}`)}
-              style={styles.mediaStyles}
-              // imageUrl={`${deals.image}`}
-              src={`${deals.image}`}
-              alt="course logo and name"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                {deals.numberOfDeals} DEALS TODAY
-              </Typography>
-            </CardContent>
-            <CardActions style={styles.buttonStyle}>
-              <Button variant="outlined" size="small">
-                VIEW DEALS
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
+          {deals.premierDeals.map((deals) => (
+            <Card
+              sx={{
+                maxWidth: 400,
+                // justifyContent: "space-between",
+                alignSelf: "center",
+              }}
+              style={styles.cardStyles}
+            >
+              <CardMedia
+                component="img"
+                // height="309"
+                image={`${deals.image}`}
+                style={styles.mediaStyles}
+                // imageUrl={`${deals.image}`}
+                // src={`${deals.image}`}
+                alt="course logo and name"
+              />
+              <CardContent style={styles.contentStyles}>
+                <Typography
+                  gutterBottom
+                  variant="h7"
+                  component="div"
+                  style={styles.headingStyles}
+                >
+                  {deals.numberOfDeals} DEALS TODAY
+                </Typography>
+              </CardContent>
+              <CardActions style={styles.buttonStyle}>
+                <Button variant="outlined" size="small">
+                  VIEW DEALS
+                </Button>
+              </CardActions>
+            </Card>
+          ))}
+        </ImageList>
       </Grid>
     </div>
   );

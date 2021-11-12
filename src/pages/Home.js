@@ -26,6 +26,7 @@ const styles = {
   boxImage: {
     backgroundImage: `url(${WestSeattle})`,
     // width: "100%",
+    // background: "linear-gradient(to right bottom, #0044F4, #00EF60)",
     height: 700,
   },
 };
