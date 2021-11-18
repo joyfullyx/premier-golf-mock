@@ -88,10 +88,12 @@ export default function BasicMenu() {
                   </MenuItem>
                 ))}
               </Menu>
-              <Button style={styles.buttonStyle}>DEALS</Button>
-              <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
             </div>
           ))}
+          <div>
+            <Button style={styles.buttonStyle}>DEALS</Button>
+            <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
+          </div>
         </Box>
       </Box>
     </div>
