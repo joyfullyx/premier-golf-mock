@@ -15,12 +15,10 @@ export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
-  // const handleClick = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
   const handleClick = (index, event) => {
     setAnchorEl({ [index]: event.currentTarget });
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -43,11 +41,13 @@ export default function BasicMenu() {
           p: 1,
         }}
       >
-        <img
-          src={PremierGolfLogo}
-          alt="premier golf logo"
-          style={styles.logoStyle}
-        />
+        <Button>
+          <img
+            src={PremierGolfLogo}
+            alt="premier golf logo"
+            style={styles.logoStyle}
+          />
+        </Button>
         <Box
           sx={{
             display: "flex",
@@ -92,14 +92,6 @@ export default function BasicMenu() {
               <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
             </div>
           ))}
-          {/* </Box> */}
-          {/* <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            p: 1,
-          }}
-        > */}
         </Box>
       </Box>
     </div>
