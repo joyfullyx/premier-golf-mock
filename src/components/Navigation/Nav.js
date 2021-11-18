@@ -39,7 +39,7 @@ export default function BasicMenu() {
       <Box
         sx={{
           display: "flex",
-          // justifyContent: "space-between",
+          justifyContent: "space-between",
           p: 1,
         }}
       >
@@ -88,19 +88,19 @@ export default function BasicMenu() {
                   </MenuItem>
                 ))}
               </Menu>
+              <Button style={styles.buttonStyle}>DEALS</Button>
+              <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
             </div>
           ))}
-        </Box>
-        {/* <Box
+          {/* </Box> */}
+          {/* <Box
           sx={{
             display: "flex",
             justifyContent: "flex-end",
             p: 1,
           }}
         > */}
-        <Button style={styles.buttonStyle}>DEALS</Button>
-        <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
-        {/* </Box> */}
+        </Box>
       </Box>
     </div>
   );
