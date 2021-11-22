@@ -38,6 +38,7 @@ export default function BasicMenu() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
           p: 1,
         }}
       >
@@ -93,6 +94,7 @@ export default function BasicMenu() {
           <div>
             <Button style={styles.buttonStyle}>DEALS</Button>
             <Button style={styles.buttonStyle}>JOIN PREMIER GC</Button>
+            <Button style={styles.buttonStyle}>ACCOUNT</Button>
           </div>
         </Box>
       </Box>

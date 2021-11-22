@@ -7,7 +7,7 @@ import "../styles/homeStyles.css";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Grid
         container
         justifyContent="center"
@@ -21,20 +21,14 @@ export default function Home() {
       <Grid container justifyContent="space-around" alignItems="center">
         <Deals />
       </Grid>
-    </>
+    </div>
   );
 }
 
 const styles = {
   boxImage: {
-    // background: `url(${WestSeattle}), linear-gradient(to right bottom, #0044F4, #00EF60)`,
-    // background:
-    //   "linear-gradient(to right bottom, #0044F4, #00EF60)",
     backgroundImage: `url(${WestSeattle})`,
     height: 700,
+    width: "100%",
   },
-  // imageStyles: {
-  //   background: "linear-gradient(to right bottom, #0044F4, #00EF60)",
-  //   opacity: 0.6,
-  // },
 };

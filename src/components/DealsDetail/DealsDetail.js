@@ -64,7 +64,7 @@ export default function DealsDetail() {
 
   return (
     <div>
-      <Grid container>
+      <Grid>
         <ImageList cols={4} gap={50}>
           {/* map over deals res to render data to cards */}
           {deals.premierDeals.map((deals) => (

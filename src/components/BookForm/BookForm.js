@@ -32,17 +32,17 @@ export default function BookForm() {
 
   return (
     <div>
-      <Grid container justifyContent="space-around" alignItems="center">
+      <Grid alignItems="center">
         <Box
           sx={{
             display: "flex",
-            flexWrap: "wrap",
+            // flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
             "& > :not(style)": {
-              m: 1,
-              width: 894,
-              height: 273,
+              m: 3,
+              // width: 894,
+              // height: 273,
             },
           }}
         >
