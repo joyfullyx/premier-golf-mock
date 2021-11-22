@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Menu,
-  Box,
-  List,
-  ListItem,
-  ListItemText,
-  MenuItem,
-} from "@mui/material";
+import { Button, Menu, Box, MenuItem } from "@mui/material";
 import PremierGolfLogo from "../../assets/PremierGolfLogo.jpg";
 import { navMenuItems } from "./navMenuItems";
 

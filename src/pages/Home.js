@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import BookForm from "../components/BookForm/BookForm";
 import WestSeattle from "../assets/WestSeattle.png";
 import Deals from "./Deals";
-import "../styles/homeStyles.css";
+// import "../styles/homeStyles.css";
 
 export default function Home() {
   return (
@@ -28,7 +28,9 @@ export default function Home() {
 const styles = {
   boxImage: {
     backgroundImage: `url(${WestSeattle})`,
+    backgroundRepeat: "no-reapeat",
     height: 700,
-    width: "100%",
+    // width: "100%",
+    backgroundSize: "cover",
   },
 };
