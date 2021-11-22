@@ -2,7 +2,8 @@
 const axios = require("axios");
 
 // for local
-const urlPrefix = "http://localhost:3001";
+// const urlPrefix = "http://localhost:3001";
+const urlPrefix = "https://premier-golf-mock-server.herokuapp.com";
 
 const API = {
   getAllDeals: function (deals) {
